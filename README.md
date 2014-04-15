@@ -63,4 +63,10 @@ From 625 ns onwards, the IR reads 9 which indicates a JMP. The jump will keep go
 
 ![alt text] (http://i60.tinypic.com/23salfn.png)
 
-then detailed instructions for 0 to 50 ns, and the jump later at 225ns
+###Detailed Analysis from 50 to 100ns, and the Jump at 225ns
+
+![alt text] (http://i60.tinypic.com/11liha9.png)
+
+By looking at the graph above and by looking at the program listing mentioned earlier, one can see that there are two sets of instructions within the given timeframe.
+
+
