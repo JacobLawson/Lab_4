@@ -33,4 +33,4 @@ The test for the datapath ran well for every value except for the Addr line. Thi
 
 After correcting the above, I ran the simulation again to run the testbench. I had to comment out a few extra semicolons in the testbench code in order to make it correct with regards to syntax. Afterwards I ran the code and got the results below
 
-http://i61.tinypic.com/d7eh0.png
+!{alt text] (http://i61.tinypic.com/d7eh0.png)
