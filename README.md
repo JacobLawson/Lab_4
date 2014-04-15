@@ -39,9 +39,7 @@ As with the ALU test bench, I went through each instruction set and I made sure 
 
 ##### Reverse Engineering
 
-GRRR!!! I hate this lab! Anyways, this is the reverse engineering part.
-
-Program listing from 0 to 700ns
+###Program listing from 0 to 700ns
 
 From 0 to 25 ns, nothing is going on as the IR is 00 and there is NOP
 
@@ -58,5 +56,11 @@ From 126 to 145ns, the IR reads 0, which means there are no operations going on.
 From 146 to 195ns, the IR reads d, which means that STA is going on. This is apparent through the accumulator staying at d, which is then loaded onto the IR. STA is then followed by b because b was loaded into the data register afterwards
 
 From 196 to 240 ns, the IR reads b, which indicates a JN. This is apparent through the 2 value being recognized as negative by Alesszero, which then prompts the IR to jump to Addr 2, which RORs the 2 into a 3 for the next set of instructions
+
+The above steps repeat over and over again until the accumulator reads a value of 7, which occurs around 625ns.
+
+From 625 ns onwards, the IR reads 9 which indicates a JMP. The jump will go to c since that is the last instruction passed along.
+
+
 
 then detailed instructions for 0 to 50 ns, and the jump later at 225ns
