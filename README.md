@@ -43,4 +43,20 @@ GRRR!!! I hate this lab! Anyways, this is the reverse engineering part.
 
 Program listing from 0 to 700ns
 
+From 0 to 25 ns, nothing is going on as the IR is 00 and there is NOP
+
+From 26 to 55ns, the LDAI function is going on as the IR reads 7, which is IR in the PRISM manual.
+This can be evident from the hex value B being loaded into the Accumulator by the time this IR is over.
+
+From 56 to 85ns, the IR reads 3, which indicates ROR. This can be evident from looking at the diagram which has the accumulator have a value of 1011 and then change to 1101, or from b to d in hex values
+
+From 86 to 125 ns, the IR reads 4, which indicates OUT. The data eventually loads the value of the accumulator into
+itself, which then disappears, presumably to the output port.---
+
+From 126 to 145ns, the IR reads 0, which means there are no operations going on.
+
+From 146 to 195ns, the IR reads d, which means that STA is going on. This is apparent through the accumulator staying at d, which is then loaded onto the IR. STA is then followed by b because b was loaded into the data register afterwards
+
+From 196 to 240 ns, the IR reads b, which indicates a JN. This is apparent through the 2 value being recognized as negative by Alesszero, which then prompts the IR to jump to Addr 2, which RORs the 2 into a 3 for the next set of instructions
+
 then detailed instructions for 0 to 50 ns, and the jump later at 225ns
