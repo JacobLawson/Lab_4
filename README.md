@@ -36,3 +36,11 @@ After correcting the above, I ran the simulation again to run the testbench. I h
 ![alt text] (http://i61.tinypic.com/d7eh0.png)
 
 As with the ALU test bench, I went through each instruction set and I made sure that the registers and the outputs had the expected values before deciding to continue further with the lab. After comparing results with what was expected with what was on the waveform, I did an overall visual confirmation to ensure the 0 to 50ns timeframe matched the waveform provided in the lab handout.
+
+##### Reverse Engineering
+
+GRRR!!! I hate this lab! Anyways, this is the reverse engineering part.
+
+Program listing from 0 to 700ns
+
+then detailed instructions for 0 to 50 ns, and the jump later at 225ns
