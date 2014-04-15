@@ -30,3 +30,7 @@ For the Datapath modifications, there were no significant ones like there were f
 The test for the datapath ran well for every value except for the Addr line. This line kept having UU hex as the assigned value up until about 100ns. The problem was that the case statement did not concatenate the MARHi and MARLo values when AddrSel was equal to one. Instead it tried to set bits 7 to 4 to MARhi and 3 to 0 to MARLo. Eventually I consulted Taylor Bodin, who said that one could try concatenating the two signals instead of assigning them to separate bits. I then used the & operand to concatenate the two signals and that produced the correct waveform in the end.
 
 ###Discussion of Testbench Operation
+
+After correcting the above, I ran the simulation again to run the testbench. I had to comment out a few extra semicolons in the testbench code in order to make it correct with regards to syntax. Afterwards I ran the code and got the results below
+
+http://i61.tinypic.com/d7eh0.png
