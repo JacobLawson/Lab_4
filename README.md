@@ -67,6 +67,12 @@ From 625 ns onwards, the IR reads 9 which indicates a JMP. The jump will keep go
 
 ![alt text] (http://i60.tinypic.com/11liha9.png)
 
-By looking at the graph above and by looking at the program listing mentioned earlier, one can see that there are two sets of instructions within the given timeframe.
+By looking at the graph above and by looking at the program listing mentioned earlier, one can see that there are two sets of instructions within the given timeframe of 50 to 100ns.
+
+From 50 to 55 ns, the previous operation of LDAI is finishing up and loading the value b into the accumulator because it was stored initially in the data register.
+
+From 56 to 85 seconds, the Reset_L value is 1, which keeps the registers from resetting. Afterwards, the operand, being b is ROR'd by one bit as evidenced by the diagram which has the accumulator have a value of 1011 and then change to 1101, or from b to d in hex values, from the beginning to the end of the instruction. This occurs by having the data, which is still at three from the last instruction, go to ZZZZ due to enaccbuffer being equal to 0. The accld is equal to 1, which prompts the accumulator to reload its value from the ALU result, which in this case goes from b to d. Again, this is a ROR operation which is confirmed by the IR reading 3 for the whole process which is the IR code for a ROR operation.
+
+From 86 to 100ns, the Reset_L value is 1, whichkeeps the registers from resetting. Afterwards, the operand is 
 
 
