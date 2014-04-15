@@ -59,8 +59,8 @@ From 196 to 240 ns, the IR reads b, which indicates a JN. This is apparent throu
 
 The above steps repeat over and over again until the accumulator reads a value of 7, which occurs around 625ns.
 
-From 625 ns onwards, the IR reads 9 which indicates a JMP. The jump will go to c since that is the last instruction passed along.
+From 625 ns onwards, the IR reads 9 which indicates a JMP. The jump will keep going to itself, making it an infinite loops afterwards
 
-
+![alt text] (http://i60.tinypic.com/23salfn.png)
 
 then detailed instructions for 0 to 50 ns, and the jump later at 225ns
